@@ -14,7 +14,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class AddToWishlist {
   private WebDriver driver;
   private String baseUrl;
-  private boolean acceptNextAlert = true;
   private StringBuffer verificationErrors = new StringBuffer();
   private Logger log;
 
@@ -23,7 +22,7 @@ public class AddToWishlist {
 	System.setProperty("webdriver.gecko.driver", "geckodriver");
     driver = new FirefoxDriver();
     baseUrl = "https://www.groupon.com";
-    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     //driver.maximize_window();
     
     log = Logger.getLogger(AddToWishlist.class);
@@ -69,36 +68,4 @@ public class AddToWishlist {
     }
   }
 
-  private boolean isElementPresent(By by) {
-    try {
-      driver.findElement(by);
-      return true;
-    } catch (NoSuchElementException e) {
-      return false;
-    }
-  }
-
-  private boolean isAlertPresent() {
-    try {
-      driver.switchTo().alert();
-      return true;
-    } catch (NoAlertPresentException e) {
-      return false;
-    }
-  }
-
-  private String closeAlertAndGetItsText() {
-    try {
-      Alert alert = driver.switchTo().alert();
-      String alertText = alert.getText();
-      if (acceptNextAlert) {
-        alert.accept();
-      } else {
-        alert.dismiss();
-      }
-      return alertText;
-    } finally {
-      acceptNextAlert = true;
-    }
-  }
 }
