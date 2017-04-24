@@ -51,11 +51,19 @@ public class BuyDeal {
     
     WebElement we1 = driver.findElement(By.xpath("//*[@id=\"browse-deals\"]/figure[1]/a"));
     we1.sendKeys(Keys.ENTER);
+    wait.until(ExpectedConditions.elementToBeClickable(By.id("trait-0")));
     
     driver.findElement(By.id("trait-0")).click();
+    wait.until(ExpectedConditions.elementToBeClickable(By.id("trait-0-1")));
+    
     driver.findElement(By.id("trait-0-1")).click();
+    Thread.sleep(2000);
+    
     driver.findElement(By.id("trait-1")).click();
+    wait.until(ExpectedConditions.elementToBeClickable(By.id("trait-1-1")));
     driver.findElement(By.id("trait-1-1")).click();
+    Thread.sleep(2000);
+    
     driver.findElement(By.id("buy-link")).click();
     driver.findElement(By.id("bottom-proceed-to-checkout")).click();
     
