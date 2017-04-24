@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://www.groupon.com/" />
+<title>resgistration_test_case</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">resgistration_test_case</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=ls-user-signup</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=label.twelve</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=full-name-input</td>
+	<td>abc</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=email-input</td>
+	<td>p1049058@mvrht.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=password-input</td>
+	<td>passwordabc</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=password-confirmation-input</td>
+	<td>passwordabc</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=remember-me-checkbox</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=terms-checkbox</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=submit</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
