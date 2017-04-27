@@ -29,7 +29,7 @@ public class AddToWishlist {
   }
 
   @Test
-  public void testBuyDeal() throws Exception {
+  public void testAddToWishList() throws Exception {
   Actions build = new Actions(driver);
   WebDriverWait wait = new WebDriverWait(driver, 10);
     driver.get(baseUrl + "/");
@@ -48,8 +48,9 @@ public class AddToWishlist {
     driver.findElement(By.id("password-input")).sendKeys("passwordabc");
     driver.findElement(By.id("remember-me-checkbox")).click();
     driver.findElement(By.id("signin-button")).click();
+    wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Getaways")));
     driver.findElement(By.linkText("Getaways")).click(); 
-    
+    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"flash-deals\"]/div/figure[1]/a/div/div[2]/div[5]/div")));
     WebElement we1 = driver.findElement(By.xpath("//*[@id=\"flash-deals\"]/div/figure[1]/a/div/div[2]/div[5]/div"));
  
     we1.click();
@@ -61,7 +62,7 @@ public class AddToWishlist {
 
   @After
   public void tearDown() throws Exception {
-    //driver.quit();
+    driver.quit();
     String verificationErrorString = verificationErrors.toString();
     if (!"".equals(verificationErrorString)) {
       fail(verificationErrorString);
