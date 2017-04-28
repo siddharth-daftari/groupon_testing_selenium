@@ -30,54 +30,59 @@ public class BuyDeal {
 
   @Test
   public void testBuyDeal() throws Exception {
-  Actions build = new Actions(driver);
-  WebDriverWait wait = new WebDriverWait(driver, 10);
-    driver.get(baseUrl + "/");
-    try{
-    	driver.findElement(By.id("nothx")).click();
-    }catch(Exception e){
-    	//ignore exception
-    }
-    driver.findElement(By.id("ls-user-signin")).sendKeys(Keys.ENTER);
-    driver.findElement(By.cssSelector("label.twelve")).click();
-    driver.findElement(By.id("email-input")).clear();
-    driver.findElement(By.id("email-input")).sendKeys("p1049058@mvrht.com");
-    driver.findElement(By.id("password-input")).clear();
-    driver.findElement(By.id("password-input")).sendKeys("passwordabc");
-    driver.findElement(By.id("remember-me-checkbox")).click();
-    driver.findElement(By.id("signin-button")).click();
-    wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Goods")));
-    driver.findElement(By.linkText("Goods")).click();
-    wait.until(ExpectedConditions.elementToBeClickable(By.linkText("For the Home")));
-    driver.findElement(By.linkText("For the Home")).click();
-	wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Art"))); 
-	
-    driver.findElement(By.linkText("Art")).click();
-    wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Canvas"))); 
-    
-    WebElement we1 = driver.findElement(By.xpath("//*[@id=\"browse-deals\"]/figure[1]/a"));
-    we1.sendKeys(Keys.ENTER);
-    wait.until(ExpectedConditions.elementToBeClickable(By.id("trait-0")));
-    
-    try{
-	    driver.findElement(By.id("trait-0")).click();
-	    wait.until(ExpectedConditions.elementToBeClickable(By.id("trait-0-1")));
+	try{
+	  Actions build = new Actions(driver);
+	  WebDriverWait wait = new WebDriverWait(driver, 10);
+	    driver.get(baseUrl + "/");
+	    try{
+	    	driver.findElement(By.id("nothx")).click();
+	    }catch(Exception e){
+	    	//ignore exception
+	    }
+	    driver.findElement(By.id("ls-user-signin")).sendKeys(Keys.ENTER);
+	    driver.findElement(By.cssSelector("label.twelve")).click();
+	    driver.findElement(By.id("email-input")).clear();
+	    driver.findElement(By.id("email-input")).sendKeys("p1049058@mvrht.com");
+	    driver.findElement(By.id("password-input")).clear();
+	    driver.findElement(By.id("password-input")).sendKeys("passwordabc");
+	    driver.findElement(By.id("remember-me-checkbox")).click();
+	    driver.findElement(By.id("signin-button")).click();
+	    wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Goods")));
+	    driver.findElement(By.linkText("Goods")).click();
+	    wait.until(ExpectedConditions.elementToBeClickable(By.linkText("For the Home")));
+	    driver.findElement(By.linkText("For the Home")).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Art"))); 
+		
+	    driver.findElement(By.linkText("Art")).click();
+	    wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Canvas"))); 
 	    
-	    driver.findElement(By.id("trait-0-1")).click();
-	    Thread.sleep(2000);
-    }catch(Exception e){}
-    
-    try{
-	    driver.findElement(By.id("trait-1")).click();
-	    wait.until(ExpectedConditions.elementToBeClickable(By.id("trait-1-1")));
-	    driver.findElement(By.id("trait-1-1")).click();
-	    Thread.sleep(2000);
-    }catch(Exception e){}
-    
-    driver.findElement(By.id("buy-link")).click();
-    driver.findElement(By.id("bottom-proceed-to-checkout")).click();
-    
-    log.info("Buy Deal flow tested successfully.");
+	    WebElement we1 = driver.findElement(By.xpath("//*[@id=\"browse-deals\"]/figure[1]/a"));
+	    we1.sendKeys(Keys.ENTER);
+	    wait.until(ExpectedConditions.elementToBeClickable(By.id("trait-0")));
+	    
+	    try{
+		    driver.findElement(By.id("trait-0")).click();
+		    wait.until(ExpectedConditions.elementToBeClickable(By.id("trait-0-1")));
+		    
+		    driver.findElement(By.id("trait-0-1")).click();
+		    Thread.sleep(2000);
+	    }catch(Exception e){}
+	    
+	    try{
+		    driver.findElement(By.id("trait-1")).click();
+		    wait.until(ExpectedConditions.elementToBeClickable(By.id("trait-1-1")));
+		    driver.findElement(By.id("trait-1-1")).click();
+		    Thread.sleep(2000);
+	    }catch(Exception e){}
+	    
+	    driver.findElement(By.id("buy-link")).click();
+	    driver.findElement(By.id("bottom-proceed-to-checkout")).click();
+	    
+	    log.info("Buy Deal flow tested successfully.");
+	}catch(Exception e){
+		log.error(e.getMessage());
+		fail(e.getMessage());
+	}
   }
 
   @After
