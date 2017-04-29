@@ -10,18 +10,17 @@ A detailed description of the project with proper screenshots and explaination c
 
 Tools used
 ==========
-0. Browser: Firefox 52.0.2 (64-bit)
-0. Selenium IDE 2.9.1
-0. Eclipse Java EE IDE for Web Developers Version: Neon.2 Release (4.6.2)
-0. Geckodriver https://github.com/mozilla/geckodriver/releases/download/v0.16.0/geckodriver-v0.16.0-macos.tar.gz
-0. Code at : https://github.com/siddharth-daftari/groupon_testing_selenium
+1. Browser: Firefox 52.0.2 (64-bit)
+2. Selenium IDE 2.9.1
+3. Eclipse Java EE IDE for Web Developers Version: Neon.2 Release (4.6.2)
+4. Geckodriver https://github.com/mozilla/geckodriver/releases/download/v0.16.0/geckodriver-v0.16.0-macos.tar.gz
 
 HOW TO RUN AUTOMATION FLOWS
 ===========================
-0. Open Eclipse IDE and create a new maven plugin in eclipse.
-0. Download geckodriver file.
-0. Place the geckodriver file in the project folder besides pom.xml file.
-0. Run maven clean and install commands and run the JUnit test cases.
+1. Open Eclipse IDE and create a new maven plugin in eclipse.
+2. Download geckodriver file.
+3. Place the geckodriver file in the project folder besides pom.xml file.
+4. Run maven clean and install commands and run the JUnit test cases.
 
 License
 =======
