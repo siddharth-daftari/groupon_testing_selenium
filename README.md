@@ -2,7 +2,7 @@ Project Name : <b>GroupOn Quality Assurance - Automation</b>
 
 Abstract
 ========
-Automating quality assurance or GroupOn web and android application using selenium and appium.
+Automating quality assurance of GroupOn website application using selenium.
 
 Report
 ======
